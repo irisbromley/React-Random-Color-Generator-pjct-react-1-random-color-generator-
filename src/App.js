@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
 
-function App() {
+export const useGenerateRandomColor = () => {
+  const [color, setColor] = useState('');
+  const generateColor = () => {
+    setColor(Math.random().toString(16).substr(-6));
+  };
+  return { color, generateColor };
+};
+export default function App() {
+  const { color, generateColor } = useGenerateRandomColor();
+  console.log(color);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button
+        onClick={() => {
+          generateColor();
+        }}
+      >
+        Generate
+      </button>
+      <div
+        style={{
+          backgroundColor: '#' + color,
+          width: 150,
+          height: 150,
+          margin: 'auto',
+        }}
+      >
+        <p>Generated color: {'#' + color}</p>
+      </div>
     </div>
   );
 }
-
-export default App;
