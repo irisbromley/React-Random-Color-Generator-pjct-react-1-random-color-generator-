@@ -30,7 +30,7 @@ export default function App() {
         }}
       >
         <p style={{ textAlign: 'center', paddingTop: 100 }}>
-          Generated color: <br /> {'#' + color}
+          Generated Color: <br /> {'#' + color}
         </p>
       </div>
       <div
