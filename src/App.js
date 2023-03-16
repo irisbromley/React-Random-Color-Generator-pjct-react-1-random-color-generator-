@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div>
       <h1
-        style={{ textAlign: 'center', marginTop: '200px', fontSize: '1.5rem' }}
+        style={{ textAlign: 'center', marginTop: '100px', fontSize: '1.5rem' }}
       >
         Random Color Generator
       </h1>
@@ -22,16 +22,16 @@ export default function App() {
         style={{
           backgroundColor: '#' + color,
           width: 300,
-          height: 300,
+          height: 190,
           margin: 'auto',
 
           borderRadius: '7px',
           border: '1px solid #00000030',
+          textAlign: 'center',
+          paddingTop: 110,
         }}
       >
-        <p style={{ textAlign: 'center', paddingTop: 100 }}>
-          Generated Color: <br /> {'#' + color}
-        </p>
+        Generated Color: <br /> {'#' + color}
       </div>
       <div
         style={{
@@ -42,14 +42,13 @@ export default function App() {
       >
         <button
           style={{
-            border: '1px solid #00000030',
+            border: '2px solid #0b1cff',
             borderRadius: '7px',
             textAlign: 'center',
             width: 150,
             height: 30,
-            backgroundColor: '##cdb9b914',
-            boxShadow: '2px 3px 2px #888888',
             cursor: 'pointer',
+            backgroundColor: 'white',
           }}
           onClick={() => {
             generateColor();
