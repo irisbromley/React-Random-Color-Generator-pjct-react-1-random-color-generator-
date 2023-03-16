@@ -31,9 +31,7 @@ export default function App() {
           paddingTop: 110,
         }}
       >
-        Generated Color:
-        <br />
-        {'#' + color}
+        Generated Color: {'#' + color}
       </div>
       <div
         style={{
