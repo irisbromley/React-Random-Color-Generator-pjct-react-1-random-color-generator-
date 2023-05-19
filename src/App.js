@@ -1,3 +1,4 @@
+import { hover } from '@testing-library/user-event/dist/hover';
 import { useState } from 'react';
 
 export const useGenerateRandomColor = () => {
@@ -31,7 +32,15 @@ export default function App() {
           paddingTop: 110,
         }}
       >
-        Generated Color: {'#' + color}
+        <span
+          style={{
+            backgroundColor: 'white',
+            padding: '6px 10px',
+            borderRadius: '6px',
+          }}
+        >
+          Generated Color: {'#' + color}
+        </span>
       </div>
       <div
         style={{
@@ -42,8 +51,8 @@ export default function App() {
       >
         <button
           style={{
-            border: '2px solid #0b1cff',
-            borderRadius: '7px',
+            border: '2px solid blue',
+            borderRadius: '6px',
             textAlign: 'center',
             width: 150,
             height: 30,
